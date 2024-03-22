@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Course Hub</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: linear-gradient(135deg, #42b883, #3c8dbc);
+    }
+    
+    /* Header styles */
+    header {
+      background-color: #00695c;
+      color: #fff;
+      padding: 20px 0;
+      border-bottom: 5px solid #004d40;
+    }
+    .navbar {
+      justify-content: flex-end;
+    }
+    .navbar-brand {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .nav-link {
+      font-size: 20px; /* Change the font size of navbar links */
+    }
+    
+    /* Course card styles */
+    .course {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+    .course:hover {
+      transform: translateY(-5px);
+    }
+    .course h3 {
+      color: #005a4f;
+    }
+    .course p {
+      color: #666666;
+    }
+    .ratings {
+      display: flex;
+      align-items: center;
+    }
+    .rating-star {
+      font-size: 20px;
+      color: #cccccc;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    .rating-star.active {
+      color: #ffd700;
+    }
+    .tick-mark {
+      color: #4caf50;
+      font-size: 24px;
+    }
+    .videoPlayer {
+      margin-top: 20px;
+      display: none;
+    }
+    
+    /* Footer styles */
+    footer {
+      background-color: #004d40;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 20px;
+      border-top: 5px solid #00695c;
+    }
+    footer p {
+      margin-bottom: 0;
+    }
+    
+    /* Main content styles */
+    main {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    /* Link styles */
+    a, a:hover {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="text-center text-md-left">
+          <img src="https://www.unifysquare.com/wp-content/uploads/2022/12/Unisys_Logo_Color_reverse_RGB.png" alt="Your Course Hub Logo" height="59"> E-Learning
+        </h3>
+      </div>
+      <div class="col-md-6">
+        <nav class="navbar">
+          <a class="nav-link text-white" href="Home page.html">Home</a>
+          <a class="nav-link text-white" href="#">About Us</a>
+          <a class="nav-link text-white" href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-4">
+    <h2 class="text-center mb-4">Explore Our Courses</h2>
+    <div id="courses-container">
+      <div class="course">
+        <div>
+          <h3><a href="#" id="webDesignLink">Metaverse<span class="tick-mark" id="tick1" style="display:none;">&#10003;</span></a></h3>
+          <p>Explore immersive virtual worlds and digital experiences in Metaverse course</p>
+          <div class="ratings">
+            <span class="rating-star" onclick="setRating(this, 1)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 2)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 3)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 4)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 5)">&#9733;</span>
+          </div>
+        </div>
+        <div id="videoPlayer1" class="videoPlayer"></div>
+        <p id="courseCompletion1" style="display:none;">Course Completed</p>
+      </div>
+
+      <div class="course">
+        <div>
+          <h3><a href="#" id="webDesignLink1">AR and VR concepts<span class="tick-mark" id="tick2" style="display:none;">&#10003;</span></a></h3>
+          <p>Explore immersive AR and VR technologies in this course</p>
+          <div class="ratings">
+            <span class="rating-star" onclick="setRating(this, 1)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 2)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 3)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 4)">&#9733;</span>
+            <span class="rating-star" onclick="setRating(this, 5)">&#9733;</span>
+          </div>
+        </div>
+        <div id="videoPlayer2" class="videoPlayer"></div>
+        <p id="courseCompletion2" style="display:none;">Course Completed</p>
+      </div>
+
+      <div class="course">
+        <div>
+          <h3><a href="https://docs.google.com/forms/d/e/1FAIpQLScGU6rmNuZ-Lry-g4ou-RAZCtZZg8vzh3tSe6XCYXrIAG_j2A/viewform" id="webDesignLink1">Quiz<span class="tick-mark" id="tick2" style="display:none;">&#10003;</span></a></h3>
+          <p>You will pass the exam if you achieve at least 75% marks; otherwise, you will fail.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>Copyright &copy; 2024 Black Squad</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var firstVideoPlayer;
+    var secondVideoPlayer;
+
+    function onYouTubeIframeAPIReady() {
+      firstVideoPlayer = new YT.Player('videoPlayer1', {
+        height: '360',
+        width: '640',
+        videoId: '6z2OPa3_1I0',
+        events: {
+          'onReady': onFirstPlayerReady
+        }
+      });
+
+      
+    }
+
+    function onFirstPlayerReady(event) {
+      firstVideoPlayer.addEventListener('onStateChange', function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          setTimeout(function() {
+            document.getElementById('tick1').style.display = "inline"; 
+          }, 60);
+        }
+      });
+    }
+
+    function onSecondPlayerReady(event) {
+      secondVideoPlayer.addEventListener('onStateChange', function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          setTimeout(function() {
+            document.getElementById('tick2').style.display = "inline"; 
+            document.getElementById('courseCompletion2').style.display = "block"; 
+          }, 60); 
+        }
+      });
+    }
+
+    var currentCourse = 1; 
+  
+    function setRating(element, rating) {
+      var stars = element.parentElement.getElementsByClassName('rating-star');
+      for (var i = 0; i < stars.length; i++) {
+        if (i < rating) {
+          stars[i].classList.add('active');
+        } else {
+          stars[i].classList.remove('active');
+        }
+      }
+    }
+  
+    
+    document.getElementById('webDesignLink').addEventListener('click', function(event) {
+      event.preventDefault(); 
+      
+      if (!firstVideoPlayer) { 
+        firstVideoPlayer = new YT.Player('videoPlayer1', {
+          height: '360',
+          width: '640',
+          videoId: '6z2OPa3_1I0',
+          events: {
+            'onReady': onFirstPlayerReady
+          }
+        });
+      }
+      document.getElementById('videoPlayer1').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/6z2OPa3_1I0?si=bTP_7TnJ4igGFSWT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+     
+      document.getElementById('tick1').style.display = 'none';
+      document.getElementById('courseCompletion1').style.display = 'none'; 
+
+      
+      document.getElementById('videoPlayer2').style.display = 'none';
+      
+      
+      document.getElementById('videoPlayer1').style.display = 'block';
+
+      if (secondVideoPlayer) {
+        secondVideoPlayer.stopVideo(); 
+      }
+      currentCourse = 1;
+      trackVideoTime('player1', 'tick1', 'courseCompletion1');
+    });
+    
+    
+    document.getElementById('webDesignLink1').addEventListener('click', function(event) {
+      event.preventDefault(); 
+     
+      if (!secondVideoPlayer) { 
+        secondVideoPlayer = new YT.Player('videoPlayer2', {
+          height: '360',
+          width: '640',
+          videoId: 'sZkoMJ_jX2c',
+          events: {
+            'onReady': onSecondPlayerReady
+          }
+        });
+      }
+
+      document.getElementById('videoPlayer2').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/sZkoMJ_jX2c?si=-HsJHmjzqBHskZzh&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      
+      document.getElementById('tick2').style.display = 'none';
+      document.getElementById('courseCompletion2').style.display = 'none'; 
+
+      
+      document.getElementById('videoPlayer1').style.display = 'none';
+      
+      
+      document.getElementById('videoPlayer2').style.display = 'block';
+
+      if (firstVideoPlayer) {
+        firstVideoPlayer.stopVideo();
+      }
+      currentCourse = 2; 
+      trackVideoTime('player2', 'tick2', 'courseCompletion2');
+    });
+
+    
+    function trackVideoTime(playerId, tickId, completionId) {
+      var player;
+      window.onYouTubeIframeAPIReady = function() {
+        player = new YT.Player(playerId, {
+          events: {
+            'onStateChange': function(event) {
+              if (event.data === YT.PlayerState.ENDED) {
+                document.getElementById(tickId).style.display = 'inline'; 
+                document.getElementById(completionId).style.display = 'block'; 
+              }
+            }
+          }
+        });
+      };
+    }
+  </script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

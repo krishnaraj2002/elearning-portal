@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+      
+      body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Updated background color */
+            color: #fff; /* Text color */
+        }
+
+        header {
+            padding: 20px 0;
+            background-color: #212121; /* Header background color */
+            color: #ffffff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .nav-link:hover {
+            color: #17a2b8;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .dropdown-toggle {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+
+        .dropdown-toggle:hover,
+        .dropdown-toggle:focus {
+            background-color: #138496;
+            border-color: #138496;
+        }
+
+        .card {
+            background-color: #171717; /* Dark cards for contrast */
+            border: none;
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+            transition: transform 0.3s ease-in-out;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            width: 100%;
+            object-fit: cover; /* Ensure the image covers the entire space */
+            height: 200px; /* Set fixed height for image */
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #17a2b8; /* Neon color for card title */
+        }
+
+        .card-title {
+            color: #00ffff; /* Neon text color for titles */
+        }
+
+        .btn-info {
+            background-color: #06d6a0; /* Vibrant button color */
+            border-color: #06d6a0;
+            box-shadow: 0 0 10px #06d6a0; /* Matching neon glow for buttons */
+        }
+
+        .btn-info:hover {
+            background-color: #05c19e;
+            border-color: #05c19e;
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: #212121; /* Footer background color */
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container-fluid p-3 mb-3 bg-dark text-white">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1><img src="https://www.unifysquare.com/wp-content/uploads/2022/12/Unisys_Logo_Color_reverse_RGB.png" alt="Your Course Hub Logo" height="59"> E-Learning</h1>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <nav class="nav">
+                    <a class="nav-link text-white" href="Home page.html">Home</a>
+                    <a class="nav-link text-white" href="about.html">About Us</a>
+                    <a class="nav-link text-white" href="#">Contact</a>
+                    <div class="user-profile dropdown">
+                        <img src="img/profile_11748243.png" alt="User Profile">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            User
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="profile settings.html">Profile Settings</a>
+                            <a class="dropdown-item" href="index.html">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container py-4">
+        <h2 class="mb-4">Explore Our Courses</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\reactcourse.png" class="card-img-top" alt="Course 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">React course</h5>
+                        <p class="card-text">Learn to build dynamic and interactive user interfaces with ReactJS, the powerful JavaScript library for building modern web applications</p>
+                        <a href="course details7.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\images.jpg" class="card-img-top" alt="Course 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Programming</h5>
+                        <p class="card-text">Explore the fundamentals of Python programming, covering topics such as syntax, data types, control structures, functions, and object-oriented programming concepts</p>
+                        <a href="course details6.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\download (1).png" class="card-img-top" alt="Course 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Java Programming</h5>
+                        <p class="card-text">Master the fundamentals of Java programming, including syntax, data types, control structures, and object-oriented principles, to build robust and efficient applications</p>
+                        <a href="course details5.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\c.png" class="card-img-top" alt="Course 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Programming in C</h5>
+                        <p class="card-text">Acquire proficiency in C programming, covering fundamental syntax and advanced topics, to develop robust and scalable software solutions</p>
+                        <a href="course details4.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\Blockchain Training.jpg" class="card-img-top" alt="Course 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Blockchain Technology</h5>
+                        <p class="card-text">This Blockchain Technology course provides a comprehensive introduction to blockchain principles and implementation using the C programming language, covering key topics like data structures, cryptography, and decentralized architectures</p>
+                        <a href="course details3.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\download.jpg" class="card-img-top" alt="Course 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Metaverse</h5>
+                        <p class="card-text">Embark on an immersive journey through the Metaverse, where virtual realms converge with reality, exploring cutting-edge technologies and innovative concepts shaping the future of digital interaction</p>
+                        <a href="course details2.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\AI and ML.jpg" class="card-img-top" alt="Course 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Artificial Intelligance And Machine Learning</h5>
+                        <p class="card-text">Explore the cutting-edge field of Artificial Intelligence and Machine Learning, mastering algorithms and techniques to analyze data, make predictions, and build intelligent systems</p>
+                        <a href="course details1.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-info">
+                    <img src="img\download3.jpg" class="card-img-top" alt="Course 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">C# Programming</h5>
+                        <p class="card-text">In C# programming, namespaces serve as containers for organizing and managing related classes and types within a defined scope</p>
+                        <a href="course details.html" class="btn btn-info stretched-link" onclick="showCourseDetails('course1')">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid p-3 bg-dark text-white text-center">
+        <p>Copyright &copy; 2024 Black Squad</p>
+    </footer>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

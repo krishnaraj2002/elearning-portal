@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family:  sans-serif;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle, #0f0f0f, #1a1a1a);
+      color: #d7d7d7;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #2a2a2a; /* Darker shade */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+      position: relative; /* Added to allow positioning of the logo */
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00ffea; /* Neon cyan */
+      margin-bottom: 20px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #333;
+      padding-bottom: 20px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid #00ffea; /* Neon border for image */
+    }
+
+    .details h2 {
+      color: #fff;
+    }
+
+    .details p {
+      color: #d7d7d7;
+    }
+
+    .settings form {
+      display: grid;
+      gap: 20px;
+      color: #d7d7d7;
+    }
+
+    .settings label {
+      font-weight: bold;
+      color: #00ffea; /* Neon cyan */
+    }
+
+    .settings input[type="text"],
+    .settings input[type="email"],
+    .settings input[type="password"],
+    .settings textarea,
+    .settings select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #333;
+      border: 1px solid #00ffea;
+      color: #d7d7d7;
+    }
+
+    .settings input[type="text"]:focus,
+    .settings input[type="email"]:focus,
+    .settings input[type="password"]:focus,
+    .settings textarea:focus,
+    .settings select:focus {
+      outline: none;
+      border-color: #ff00ff; /* Magenta glow on focus */
+    }
+
+    .settings button {
+      padding: 10px 20px;
+      background-color: #00ffea; /* Neon cyan */
+      color: #0f0f0f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .settings button:hover {
+      background-color: #ff00ff; /* Magenta */
+      color: #fff;
+    }
+
+    .settings .submit-container {
+      text-align: center;
+    }
+
+    button {
+      background-color: #333; /* Dark background for contrast */
+      color: #00ffea; /* Neon text */
+      border: 1px solid #00ffea; /* Neon border */
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00ffea; /* Neon background */
+      color: #0f0f0f; /* Dark text for contrast */
+    }
+
+    /* Logo styles */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://www.unifysquare.com/wp-content/uploads/2022/12/Unisys_Logo_Color_reverse_RGB.png" alt="Logo" class="logo">
+    <h1>User Profile Settings</h1>
+    <div class="profile">
+      <img src="img/profile_11748243.png" alt="Profile Picture">
+      <div class="details">
+        <h2>Krishna</h2>
+        <p>Email: krishnarajsan007@gmail.com</p>
+        <p>Location: Puducherry</p>
+        <button>Edit Profile</button>
+      </div>
+    </div>
+    <div class="settings">
+      <h2>Account Settings</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4"></textarea>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <label for="language">Preferred Language:</label>
+        <select id="language" name="language">
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="german">German</option>
+        </select>
+        
+        <label for="timezone">Timezone:</label>
+        <select id="timezone" name="timezone">
+          <option value="GMT-12">GMT-12</option>
+          <option value="GMT-11">GMT-11</option>
+        </select>
+        
+        <div class="submit-container">
+          <button type="submit">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
